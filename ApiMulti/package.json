@@ -1,0 +1,9 @@
+{
+  "name": "RVG",
+  "version": "0.1.0",
+  "main": "./server.js",
+  "dependencies" : {
+        "mysql" : "~2.5.0",
+        "url" : "~0.10.1"
+  }
+}

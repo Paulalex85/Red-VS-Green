@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F56C9945-C838-4694-BE82-E2832410E121}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>RedVsGreen</RootNamespace>
+    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+    <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+    <AndroidUseLatestPlatformSdk>False</AndroidUseLatestPlatformSdk>
+    <AndroidApplication>True</AndroidApplication>
+    <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
+    <AndroidResgenClass>Resource</AndroidResgenClass>
+    <AssemblyName>RedVsGreen</AssemblyName>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+    <TargetFrameworkVersion>v4.0.3</TargetFrameworkVersion>
+    <JavaMaximumHeapSize>1G</JavaMaximumHeapSize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;__MOBILE__;__ANDROID__;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidLinkMode>None</AndroidLinkMode>
+    <ConsolePause>false</ConsolePause>
+    <AndroidSupportedAbis>armeabi;armeabi-v7a;x86</AndroidSupportedAbis>
+    <EmbedAssembliesIntoApk>True</EmbedAssembliesIntoApk>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <DefineConstants>__MOBILE__;__ANDROID__;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <AndroidSupportedAbis>armeabi;armeabi-v7a;x86</AndroidSupportedAbis>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Mono.Android" />
+    <Reference Include="OpenTK" />
+    <Reference Include="MonoGame.Framework">
+      <HintPath>bin\Debug\MonoGame.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Lidgren.Network">
+      <HintPath>bin\Debug\Lidgren.Network.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Json" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="WebSocket4Net.MonoTouch">
+      <HintPath>..\lib\WebSocket4Net.MonoTouch.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.1\lib\portable-net40+sl5+wp80+win8+monotouch+monoandroid\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v13">
+      <HintPath>..\packages\Xamarin.Android.Support.v13.20.0.0.4\lib\MonoAndroid32\Xamarin.Android.Support.v13.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v4">
+      <HintPath>..\packages\Xamarin.Android.Support.v4.20.0.0.4\lib\MonoAndroid32\Xamarin.Android.Support.v4.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.MediaRouter">
+      <HintPath>..\packages\Xamarin.Android.Support.v7.MediaRouter.20.0.0\lib\MonoAndroid10\Xamarin.Android.Support.v7.MediaRouter.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.AppCompat">
+      <HintPath>..\packages\Xamarin.Android.Support.v7.AppCompat.20.0.0\lib\MonoAndroid10\Xamarin.Android.Support.v7.AppCompat.dll</HintPath>
+    </Reference>
+    <Reference Include="GooglePlayServicesLib">
+      <HintPath>..\packages\Xamarin.GooglePlayServices.19.0.0.1\lib\MonoAndroid23\GooglePlayServicesLib.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Activity1.cs" />
+    <Compile Include="Game1.cs" />
+    <Compile Include="Resources\Resource.designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ScreenManager\Button.cs" />
+    <Compile Include="ScreenManager\GameScreen.cs" />
+    <Compile Include="ScreenManager\InputState.cs" />
+    <Compile Include="ScreenManager\MenuEntry.cs" />
+    <Compile Include="ScreenManager\MenuScreen.cs" />
+    <Compile Include="ScreenManager\PhoneMenuScreen.cs" />
+    <Compile Include="ScreenManager\PlayerIndexEventArgs.cs" />
+    <Compile Include="ScreenManager\ScreenManager.cs" />
+    <Compile Include="ScreenManager\TransitionDebutScreen.cs" />
+    <Compile Include="ScreenManager\TransitionScreen.cs" />
+    <Compile Include="IsolatedStorageSettings.cs" />
+    <Compile Include="GameEngine\MenuClass\MainMenuScreen.cs" />
+    <Compile Include="GameEngine\MenuClass\BackgroundScreen.cs" />
+    <Compile Include="Assets\ReadAsset.cs" />
+    <Compile Include="GameEngine\MenuClass\SelectionScreen.cs" />
+    <Compile Include="DogeTools\RoundedRectangle.cs" />
+    <Compile Include="GameEngine\GameClass\PlateauClass.cs" />
+    <Compile Include="GameEngine\GameClass\PlayClass.cs" />
+    <Compile Include="DogeTools\TransitionClass.cs" />
+    <Compile Include="GameEngine\GameClass\CaseClass.cs" />
+    <Compile Include="GameEngine\GameClass\FinPartieClass.cs" />
+    <Compile Include="GameEngine\Typical_Class_divers\IAClass.cs" />
+    <Compile Include="GameEngine\Typical_Class_divers\EloClass.cs" />
+    <Compile Include="GameEngine\Typical_Class_divers\AnnimationClass.cs" />
+    <Compile Include="GameEngine\MenuClass\Name_Screen.cs" />
+    <Compile Include="GameEngine\Typical_Class_divers\Keyboard.cs" />
+    <Compile Include="GameEngine\Typical_Class_divers\Keyboard_Lettre.cs" />
+    <Compile Include="GameEngine\MenuClass\Type_Partie_Screen.cs" />
+    <Compile Include="DogeTools\Divers_Method.cs" />
+    <Compile Include="GameEngine\MenuClass\RechercheAdversaireClass.cs" />
+    <Compile Include="DogeTools\Bouton.cs" />
+    <Compile Include="GameEngine\MenuClass\OptionScreen.cs" />
+    <Compile Include="DogeTools\Compteur_Time.cs" />
+    <Compile Include="DogeTools\LoadingSprite.cs" />
+    <Compile Include="GameEngine\MenuClass\Adversaire_Found_POPUP.cs" />
+    <Compile Include="GameEngine\GameClass\IntroClass.cs" />
+    <Compile Include="GameEngine\MenuClass\No_Connection_POPUP.cs" />
+    <Compile Include="GameEngine\GameClass\Quit_Game_POPUP.cs" />
+    <Compile Include="GameEngine\MenuClass\Tuto.cs" />
+    <Compile Include="GameEngine\Typical_Class_divers\Plateau_Intro.cs" />
+    <Compile Include="DogeTools\Police_Size_Manage.cs" />
+    <Compile Include="DogeTools\Echange_Server_Class.cs" />
+    <Compile Include="DogeTools\Languages.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AboutResources.txt" />
+    <None Include="Assets\AboutAssets.txt" />
+    <None Include="Properties\AndroidManifest.xml" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\Icon.png" />
+    <AndroidResource Include="Resources\drawable\Splash.png" />
+    <AndroidResource Include="Resources\values\Styles.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="DogeTools\" />
+    <Folder Include="ScreenManager\" />
+    <Folder Include="GameEngine\" />
+    <Folder Include="GameEngine\MenuClass\" />
+    <Folder Include="GameEngine\GameClass\" />
+    <Folder Include="Assets\Content\" />
+    <Folder Include="GameEngine\Typical_Class_divers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Content\blank.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\Content\clear.png" />
+    <AndroidAsset Include="Assets\Content\Lettre_keyboard.xnb" />
+    <AndroidAsset Include="Assets\Content\back.png" />
+    <AndroidAsset Include="Assets\Content\cancel.png" />
+    <AndroidAsset Include="Assets\Content\b_30.xnb" />
+    <AndroidAsset Include="Assets\Content\b_35.xnb" />
+    <AndroidAsset Include="Assets\Content\bold_font.xnb" />
+    <AndroidAsset Include="Assets\Content\regular_font.xnb" />
+    <AndroidAsset Include="Assets\Content\regular_font_16.xnb" />
+  </ItemGroup>
+  <ItemGroup>
+    <XamarinComponentReference Include="googleplayservices">
+      <Version>19.0.0.2</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+  </ItemGroup>
+</Project>

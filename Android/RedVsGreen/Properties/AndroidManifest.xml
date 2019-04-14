@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionName="1.1.1" package="redvsgreen" android:versionCode="3">
+	<uses-sdk android:minSdkVersion="15" android:targetSdkVersion="15" />
+	<application android:label="Red VS Green" android:icon="@drawable/icon">
+		<activity android:name="com.google.android.gms.ads.AdActivity" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" android:theme="@android:style/Theme.Translucent" />
+	</application>
+	<uses-permission android:name="android.permission.INTERNET" />
+</manifest>
